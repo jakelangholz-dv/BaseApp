@@ -15,9 +15,22 @@
         completions."
     </string>
 
+
+    <!-- Hints and Labels -->
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+
+
+
+
+
+
+
+    <!-- Errors -->
+    <string name="invalid_email">Not a valid email.</string>
+    <string name="invalid_password">Password must be more than 6 alphanumeric characters.</string>
+
 
 </resources>

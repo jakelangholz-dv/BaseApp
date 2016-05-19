@@ -5,15 +5,41 @@
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bcgdv.langholzjacob.baseapp.HomeActivity">
+    tools:context="com.bcgdv.langholzjacob.baseapp.HomeActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_home"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="247dp"
+        android:id="@+id/user_email"
         app:layout_constraintLeft_toLeftOf="@+id/activity_home"
+        tools:layout_constraintLeft_creator="0"
+        app:layout_constraintTop_toTopOf="@+id/activity_home"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintTop_creator="0"
         app:layout_constraintRight_toRightOf="@+id/activity_home"
-        app:layout_constraintTop_toTopOf="@+id/activity_home" />
+        tools:layout_constraintRight_creator="0"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home"
+        android:layout_marginBottom="16dp"
+        tools:layout_constraintBottom_creator="0" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="271dp"
+        android:id="@+id/firebase_uid"
+        app:layout_constraintLeft_toLeftOf="@+id/user_email"
+        tools:layout_constraintLeft_creator="0"
+        app:layout_constraintTop_toBottomOf="@+id/user_email"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintTop_creator="0"
+        app:layout_constraintRight_toRightOf="@+id/user_email"
+        tools:layout_constraintRight_creator="0" />
 
 </android.support.constraint.ConstraintLayout>

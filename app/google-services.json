@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:610118831838:android:3d76e58abdb95190",
         "android_client_info": {
-          "package_name": "langholzjacob.bcgdv.com"
+          "package_name": "com.bcgdv.langholzjacob.baseapp"
         }
       },
       "oauth_client": [
