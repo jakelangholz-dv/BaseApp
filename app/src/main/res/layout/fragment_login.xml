@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context="com.bcgdv.langholzjacob.baseapp.LoginFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="384dp"
+        android:layout_height="511dp"
+        android:id="@+id/constraintLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="143dp"
+            android:id="@+id/username"
+            android:hint="@string/username"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            app:layout_constraintLeft_toLeftOf="@+id/password"
+            tools:layout_constraintLeft_creator="0"
+            app:layout_constraintRight_toRightOf="@+id/password"
+            tools:layout_constraintRight_creator="0"
+            app:layout_constraintBottom_toTopOf="@+id/password"
+            android:layout_marginBottom="16dp"
+            tools:layout_constraintBottom_creator="0"
+            android:inputType="textWebEmailAddress" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="201dp"
+            android:id="@+id/password"
+            android:hint="@string/password"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:fontFamily="sans-serif"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+            tools:layout_constraintLeft_creator="0"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+            tools:layout_constraintTop_creator="0"
+            app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+            tools:layout_constraintRight_creator="0"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            tools:layout_constraintBottom_creator="0"
+            app:layout_constraintVertical_bias="0.43" />
+
+
+        <Button
+            android:text="@string/sign_in"
+            android:layout_width="214dp"
+            android:layout_height="51dp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="259dp"
+            android:id="@+id/sign_in"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            android:layout_marginTop="16dp"
+            tools:layout_constraintTop_creator="0"
+            app:layout_constraintRight_toRightOf="@+id/password"
+            tools:layout_constraintRight_creator="0" />
+
+        <Button
+            android:text="@string/sign_up"
+            android:layout_width="214dp"
+            android:layout_height="51dp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="318dp"
+            android:id="@+id/sign_up"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in"
+            android:layout_marginTop="8dp"
+            tools:layout_constraintTop_creator="0"
+            app:layout_constraintRight_toRightOf="@+id/sign_in"
+            tools:layout_constraintRight_creator="0" />
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

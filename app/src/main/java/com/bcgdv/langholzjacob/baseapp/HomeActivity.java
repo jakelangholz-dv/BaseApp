@@ -18,6 +18,8 @@ public class HomeActivity extends AppCompatActivity {
         if (auth.getCurrentUser() == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content, loginFragment).commit();
+        } else {
+
         }
 
 
