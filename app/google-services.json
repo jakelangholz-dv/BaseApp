@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "610118831838",
+    "firebase_url": "https://baseapp-a01e0.firebaseio.com",
+    "project_id": "baseapp-a01e0",
+    "storage_bucket": "baseapp-a01e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610118831838:android:3d76e58abdb95190",
+        "android_client_info": {
+          "package_name": "langholzjacob.bcgdv.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610118831838-lmu5m413vnknq3o81mt3ham4ko469ulg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXtqVfV1mDw1RSn2yrTHyZzv1FgCOCdpY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
