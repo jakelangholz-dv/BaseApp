@@ -24,7 +24,7 @@ public class FirebaseHelper {
 
     public void write(final Object object, final String tableRef) {
         DatabaseReference ref = m_fdb.getReference(tableRef);
-        ref.setValue(object);
+        ref.push().setValue(object);
     }
 
 }

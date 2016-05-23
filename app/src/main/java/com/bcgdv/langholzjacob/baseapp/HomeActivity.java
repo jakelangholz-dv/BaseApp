@@ -69,8 +69,12 @@ public class HomeActivity extends AppCompatActivity {
             TextView user_email = (TextView) findViewById(R.id.user_email);
             TextView firebase_uid = (TextView) findViewById(R.id.firebase_uid);
 
-            user_email.setText(m_auth.getCurrentUser().getEmail());
-            firebase_uid.setText(m_auth.getCurrentUser().getUid());
+            try {
+                user_email.setText(m_auth.getCurrentUser().getEmail());
+                firebase_uid.setText(m_auth.getCurrentUser().getUid());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         m_fbHelper = new FirebaseHelper();
     }
