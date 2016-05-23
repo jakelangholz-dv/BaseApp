@@ -11,9 +11,9 @@ public class Entry {
 
     private UUID entryID;
     private Date date;
-    private UUID userID;
+    private String userID;
 
-    public Entry(final UUID userID, final Date date) {
+    public Entry(final String userID, final Date date) {
         this.entryID = UUID.randomUUID();
         this.userID = userID;
         this.date = date;
@@ -21,5 +21,5 @@ public class Entry {
 
     public UUID getEntryID() {return entryID;}
     public Date getDate() {return date;}
-    public UUID getUserID() {return userID;}
+    public String getUserID() {return userID;}
 }

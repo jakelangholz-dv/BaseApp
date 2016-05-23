@@ -47,7 +47,7 @@ public class LoginFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         m_auth = FirebaseAuth.getInstance();
-        m_fbHelper.initDB();
+        m_fbHelper = new FirebaseHelper();
     }
 
     @Override

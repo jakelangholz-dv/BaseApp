@@ -17,10 +17,8 @@ public class FirebaseHelper {
     public static String USER = "user";
 
     private FirebaseDatabase m_fdb;
-    private DatabaseReference m_userRef;
-    private DatabaseReference m_entryRef;
 
-    public void initDB() {
+    public FirebaseHelper() {
         m_fdb = FirebaseDatabase.getInstance();
     }
 
