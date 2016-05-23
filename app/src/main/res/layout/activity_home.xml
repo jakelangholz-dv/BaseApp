@@ -10,27 +10,26 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="247dp"
+        android:layout_width="79dp"
+        android:layout_height="15dp"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="16dp"
         android:id="@+id/user_email"
         app:layout_constraintLeft_toLeftOf="@+id/activity_home"
+        android:layout_marginStart="16dp"
         tools:layout_constraintLeft_creator="0"
         app:layout_constraintTop_toTopOf="@+id/activity_home"
         android:layout_marginTop="16dp"
         tools:layout_constraintTop_creator="0"
         app:layout_constraintRight_toRightOf="@+id/activity_home"
-        tools:layout_constraintRight_creator="0"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_home"
-        android:layout_marginBottom="16dp"
-        tools:layout_constraintBottom_creator="0" />
+        android:layout_marginEnd="16dp"
+        tools:layout_constraintRight_creator="0" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="271dp"
+        android:layout_width="79dp"
+        android:layout_height="16dp"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="39dp"
         android:id="@+id/firebase_uid"
         app:layout_constraintLeft_toLeftOf="@+id/user_email"
         tools:layout_constraintLeft_creator="0"
@@ -38,6 +37,43 @@
         android:layout_marginTop="8dp"
         tools:layout_constraintTop_creator="0"
         app:layout_constraintRight_toRightOf="@+id/user_email"
+        tools:layout_constraintRight_creator="0"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="442dp"
+        android:id="@+id/dataButton"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_home"
+        tools:layout_constraintLeft_creator="0"
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintTop_creator="0"
+        app:layout_constraintRight_toRightOf="@+id/activity_home"
+        tools:layout_constraintRight_creator="0"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home"
+        android:layout_marginBottom="16dp"
+        tools:layout_constraintBottom_creator="0"
+        android:text="@string/record_button" />
+
+    <ListView
+        android:layout_width="323dp"
+        android:layout_height="358dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="71dp"
+        android:background="@android:color/transparent"
+        android:entries="@android:color/holo_blue_dark"
+        android:id="@+id/listView"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_home"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintLeft_creator="0"
+        app:layout_constraintTop_toBottomOf="@+id/firebase_uid"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintTop_creator="0"
+        app:layout_constraintRight_toRightOf="@+id/activity_home"
+        android:layout_marginEnd="16dp"
         tools:layout_constraintRight_creator="0" />
 
 </android.support.constraint.ConstraintLayout>

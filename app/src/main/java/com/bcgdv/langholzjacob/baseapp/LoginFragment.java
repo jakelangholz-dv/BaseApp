@@ -1,38 +1,32 @@
 package com.bcgdv.langholzjacob.baseapp;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
+import model.User;
+import util.FirebaseHelper;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link LoginFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link LoginFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class LoginFragment extends Fragment {
 
+    private FirebaseHelper m_fbHelper;
     private FirebaseAuth m_auth;
+
     private EditText m_usernameEditText;
     private EditText m_passwordEditText;
+
     private Button m_signInButton;
     private Button m_signUpButton;
 
@@ -53,6 +47,7 @@ public class LoginFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         m_auth = FirebaseAuth.getInstance();
+        m_fbHelper.initDB();
     }
 
     @Override
@@ -79,21 +74,6 @@ public class LoginFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
     }
 
     private boolean initViews() {
@@ -134,7 +114,6 @@ public class LoginFragment extends Fragment {
                         exitFragment(task);
                     }
                 });
-
             }
         });
     }
@@ -151,6 +130,7 @@ public class LoginFragment extends Fragment {
 
     private void exitFragment(@NonNull Task<AuthResult> task) {
         if (task.isSuccessful()) {
+            m_fbHelper.write(new User(m_auth.getCurrentUser()), FirebaseHelper.USER);
             getActivity().getSupportFragmentManager().popBackStack();
         }
     }

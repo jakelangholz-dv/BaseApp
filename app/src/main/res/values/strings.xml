@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BaseApp</string>
+    <string name="app_name">FirebaseDemoApp</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
@@ -21,6 +21,7 @@
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+    <string name="record_button">Record DateTime</string>
 
 
 
