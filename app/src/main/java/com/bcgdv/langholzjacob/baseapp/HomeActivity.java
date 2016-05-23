@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         m_dataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Entry entry = new Entry(UUID.fromString(m_auth.getCurrentUser().getUid()), new Date());
+                Entry entry = new Entry(m_auth.getCurrentUser().getUid(), new Date());
                 adapter.add("Button clicked: " + entry.getDate().toString());
                 m_fbHelper.write(entry, FirebaseHelper.ENTRY);
             }
@@ -72,6 +72,6 @@ public class HomeActivity extends AppCompatActivity {
             user_email.setText(m_auth.getCurrentUser().getEmail());
             firebase_uid.setText(m_auth.getCurrentUser().getUid());
         }
-        m_fbHelper.initDB();
+        m_fbHelper = new FirebaseHelper();
     }
 }
